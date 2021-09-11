@@ -21,10 +21,6 @@
  */
 #pragma once
 
-////////////////////////////
-// VENDOR VERSION EXAMPLE //
-////////////////////////////
-
 /**
  * Marlin release version identifier
  */
@@ -43,29 +39,10 @@
  */
 //#define STRING_DISTRIBUTION_DATE "2021-12-08"
 
-/**
- * Defines a generic printer name to be output to the LCD after booting Marlin.
- */
-//#define MACHINE_NAME "3D Printer"
-
-/**
- * The SOURCE_CODE_URL is the location where users will find the Marlin Source
- * Code which is installed on the device. In most cases —unless the manufacturer
- * has a distinct Github fork— the Source Code URL should just be the main
- * Marlin repository.
- */
-//#define SOURCE_CODE_URL "github.com/MarlinFirmware/Marlin"
-
-/**
- * Default generic printer UUID.
- */
-//#define DEFAULT_MACHINE_UUID "cede2a2f-41a2-4748-9b12-c55c62f367ff"
-
-/**
- * The WEBSITE_URL is the location where users can get more information such as
- * documentation about a specific Marlin release.
- */
-//#define WEBSITE_URL "marlinfw.org"
+#define MACHINE_NAME "Ender 3 v2: frogamic edition"
+#define SOURCE_CODE_URL "github.com/frogamic/Marlin"
+#define DEFAULT_MACHINE_UUID "da578fa1-2049-4beb-95d7-bf0cf1802b2a"
+#define WEBSITE_URL "frogamic.website"
 
 /**
  * Set the vendor info the serial USB interface, if changable
