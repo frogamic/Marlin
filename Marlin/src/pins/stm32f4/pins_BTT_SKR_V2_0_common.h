@@ -448,7 +448,28 @@
 //
 // LCDs and Controllers
 //
-#if IS_TFTGLCD_PANEL
+#if EITHER(HAS_DWIN_E3V2, IS_DWIN_MARLINUI)
+  /**
+   *        ------              ------              ------
+   *   VCC | 1  2 | GND    VCC | 1  2 | GND    GND |  2 1 | VCC
+   *     A | 3  4 | B        A | 3  4 | B        B |  4 3 | A
+   *  BEEP | 5  6   ENT   BEEP | 5  6   ENT    ENT |  6 5 | BEEP
+   *       | 7  8 | RX      TX | 7  8 | RX      RX |  8 7 | TX
+   *  BEEP | 9 10 | ENT        | 9 10 |            | 10 9 |
+   *        ------              ------              ------
+   *         EXP1                DWIN             DWIN (plug)
+   *
+   * All pins are labeled as printed on DWIN PCB. Connect TX-TX, A-A and so on.
+   */
+
+  // #error "Ender-3 V2 display requires a custom cable, see diagram above this line. Comment out this line to continue."
+
+  #define BTN_EN1                         EXP1_08_PIN
+  #define BTN_EN2                         EXP1_07_PIN
+  #define BEEPER_PIN                      EXP1_06_PIN
+  #define BTN_ENC                         EXP1_05_PIN
+
+#elif IS_TFTGLCD_PANEL
 
   #if ENABLED(TFTGLCD_PANEL_SPI)
     #define TFTGLCD_CS               EXP2_08_PIN

@@ -42,7 +42,7 @@
 #define MACHINE_NAME "Ender 3 v2: frogamic edition"
 #define SOURCE_CODE_URL "github.com/frogamic/Marlin"
 #define DEFAULT_MACHINE_UUID "da578fa1-2049-4beb-95d7-bf0cf1802b2a"
-#define WEBSITE_URL "frogamic.website"
+#define WEBSITE_URL SOURCE_CODE_URL
 
 /**
  * Set the vendor info the serial USB interface, if changable
