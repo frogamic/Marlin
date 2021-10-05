@@ -15,11 +15,22 @@
           platformio
           (writeShellScriptBin "build" ''
             cd "${git-root}"
-            BUILD_INFO="$(${git}/bin/git rev-parse --short HEAD)"
+
+            export MACHINE_NAME="Ender 3 v2: frogamic edition"
+            export SOURCE_CODE_URL="github.com/frogamic/Marlin"
+            export WEBSITE_URL="https://frogamic.website"
+            export DEFAULT_MACHINE_UUID="da578fa1-2049-4beb-95d7-bf0cf1802b2a"
+
+            export STRING_DISTRIBUTION_DATE="$(date '+%Y-%m-%d')"
+            export BRANCH="$(${git}/bin/git symbolic-ref -q --short HEAD 2>/dev/null || true)"
+            export VERSION="$(${git}/bin/git rev-parse --short HEAD 2>/dev/null || true)"
             if [[ "$(${git}/bin/git diff --stat)" != "" ]]; then
-              BUILD_INFO="''${BUILD_INFO} (dirty)"
+              VERSION="''${VERSION} (dirty)"
             fi
-            echo "#define DETAILED_BUILD_VERSION \"''${BUILD_INFO}\"" > Marlin/Buildinfo.h
+
+            export DETAILED_BUILD_VERSION="''${BRANCH}-''${VERSION}"
+
+            ./buildroot/bin/generate_version
             ${platformio}/bin/pio run -e ${platform}
           '')
           (writeShellScriptBin "push" ''

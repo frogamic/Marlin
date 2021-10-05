@@ -20,9 +20,8 @@
 #
 
 # Generated files
-_Version.h
+Marlin/Version.h
 bdf2u8g
-Marlin/Buildinfo.h
 
 #
 # OS
