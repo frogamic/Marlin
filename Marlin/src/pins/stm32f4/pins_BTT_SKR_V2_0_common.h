@@ -464,10 +464,10 @@
 
   // #error "Ender-3 V2 display requires a custom cable, see diagram above this line. Comment out this line to continue."
 
-  #define BTN_EN1                         EXP1_08_PIN
-  #define BTN_EN2                         EXP1_07_PIN
-  #define BEEPER_PIN                      EXP1_06_PIN
-  #define BTN_ENC                         EXP1_05_PIN
+  #define BTN_EN1                         EXP1_03_PIN
+  #define BTN_EN2                         EXP1_04_PIN
+  #define BEEPER_PIN                      EXP1_05_PIN
+  #define BTN_ENC                         EXP1_06_PIN
 
 #elif IS_TFTGLCD_PANEL
 
