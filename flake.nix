@@ -30,6 +30,7 @@
 
             export DETAILED_BUILD_VERSION="''${BRANCH}-''${VERSION}"
 
+            [[ -f "Marlin/Version.h" ]] || touch "Marlin/Version.h"
             ./buildroot/bin/generate_version
             ${platformio}/bin/pio run -e ${platform}
           '')
