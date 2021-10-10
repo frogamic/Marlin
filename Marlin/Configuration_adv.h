@@ -976,7 +976,7 @@
 #if ENABLED(ASSISTED_TRAMMING)
 
   // Define positions for probe points.
-  #define TRAMMING_POINT_XY { { 30, 27 }, { 200, 27 }, { 200, 195 }, { 30, 195 } }
+  #define TRAMMING_POINT_XY { { 28.5, 26.8 }, { 198.4, 25.8 }, { 198.0, 196.3 }, { 29.2, 197.3 } }
 
   // Define position names for probe points.
   #define TRAMMING_POINT_NAME_1 "Front-Left"
@@ -985,7 +985,7 @@
   #define TRAMMING_POINT_NAME_4 "Back-Left"
 
   #define RESTORE_LEVELING_AFTER_G35    // Enable to restore leveling setup after operation
-  //#define REPORT_TRAMMING_MM          // Report Z deviation (mm) for each point relative to the first
+  #define REPORT_TRAMMING_MM          // Report Z deviation (mm) for each point relative to the first
 
   #define ASSISTED_TRAMMING_WIZARD    // Add a Tramming Wizard to the LCD menu
 
@@ -1705,7 +1705,7 @@
 
 #if HAS_MARLINUI_U8GLIB || IS_DWIN_MARLINUI
   // Show SD percentage next to the progress bar
-  //#define SHOW_SD_PERCENT
+  #define SHOW_SD_PERCENT
 
   // Enable to save many cycles by drawing a hollow frame on Menu Screens
   #define MENU_HOLLOW_FRAME
