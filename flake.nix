@@ -1,7 +1,7 @@
 {
   inputs.flake-utils.url = "github:numtide/flake-utils";
   outputs = {self, nixpkgs, flake-utils, ...}: let
-    platform = "BIGTREE_SKR_2_USB";
+    platform = "BIGTREE_SKR_2_F429_USB";
     host = "nammu";
     printer = "ender3v2";
   in
